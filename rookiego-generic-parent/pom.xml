@@ -39,5 +39,7 @@
 		<module>generic-utils</module>
 		<module>generic-job</module>
 		<module>generic-http</module>
+		<module>generic-zk</module>
+		<module>generic-cache</module>
 	</modules>
 </project>
