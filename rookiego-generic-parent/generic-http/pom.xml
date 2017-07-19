@@ -7,4 +7,13 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>generic-http</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>${httpclient.version}</version>
+		</dependency>
+	</dependencies>
+
 </project>
