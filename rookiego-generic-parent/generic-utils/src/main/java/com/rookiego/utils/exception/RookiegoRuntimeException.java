@@ -10,5 +10,27 @@ package com.rookiego.utils.exception;
 public class RookiegoRuntimeException extends RuntimeException {
 
 	private static final long serialVersionUID = 771869248504948013L;
+	
+	private String errorCode;
+	
+	public String getErrorCode() {
+		return errorCode;
+	}
+	
+	public void setErrorCode(String errorCode) {
+		this.errorCode = errorCode;
+	}
+	
+	public RookiegoRuntimeException(String errorMsg) {
+		super(errorMsg);
+	}
+	
+	public RookiegoRuntimeException(Throwable e) {
+		super(e);
+	}
+	
+	public RookiegoRuntimeException(String errorMsg, Throwable e) {
+		super(errorMsg, e);
+	}
 
 }
