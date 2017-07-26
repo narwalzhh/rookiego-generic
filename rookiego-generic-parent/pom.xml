@@ -9,7 +9,8 @@
 
 	<properties>
 		<httpclient.version>3.1</httpclient.version>
-
+		<mybatis.version>3.4.4</mybatis.version>	
+		<mybatis-spring.version>1.3.1</mybatis-spring.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -43,5 +44,6 @@
 		<module>generic-http</module>
 		<module>generic-zk</module>
 		<module>generic-cache</module>
+		<module>generic-base-service</module>
 	</modules>
 </project>

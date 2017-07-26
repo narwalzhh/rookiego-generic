@@ -11,4 +11,26 @@ public class RookiegoRestException extends Exception {
 
 	private static final long serialVersionUID = 5563981910717803185L;
 
+	private String errorCode;
+
+	public String getErrorCode() {
+		return errorCode;
+	}
+
+	public void setErrorCode(String errorCode) {
+		this.errorCode = errorCode;
+	}
+
+	public RookiegoRestException(String errorMsg) {
+		super(errorMsg);
+	}
+
+	public RookiegoRestException(Throwable e) {
+		super(e);
+	}
+
+	public RookiegoRestException(String errorMsg, Throwable e) {
+		super(errorMsg, e);
+	}
+
 }
