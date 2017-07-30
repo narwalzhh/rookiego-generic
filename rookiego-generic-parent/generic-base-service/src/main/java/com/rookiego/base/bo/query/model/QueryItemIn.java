@@ -1,4 +1,4 @@
-package com.rookiego.base.bo.query;
+package com.rookiego.base.bo.query.model;
 
 import java.io.Serializable;
 import java.util.List;

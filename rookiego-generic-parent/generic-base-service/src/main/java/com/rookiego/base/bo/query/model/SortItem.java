@@ -1,4 +1,4 @@
-package com.rookiego.base.bo.query;
+package com.rookiego.base.bo.query.model;
 
 import java.io.Serializable;
 
@@ -22,7 +22,6 @@ public class SortItem implements Serializable {
 	private String order;
 
 	public SortItem(String field, String order) {
-		super();
 		this.field = field;
 		this.order = order;
 	}

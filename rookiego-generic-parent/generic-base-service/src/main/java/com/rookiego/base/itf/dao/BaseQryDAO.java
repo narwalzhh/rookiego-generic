@@ -4,6 +4,9 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
+import com.rookiego.base.bo.query.PageQueryInfo;
+import com.rookiego.base.bo.query.QueryInfo;
+import com.rookiego.base.bo.query.model.CommQueryItem;
 import com.rookiego.base.itf.BizObj;
 
 /**
@@ -48,11 +51,34 @@ public interface BaseQryDAO<T extends BizObj> {
 	List<T> listByPid(@Param("pid") String pid);
 
 	/**
-	 * 根据名称和编码批量查询
+	 * 根据名称模糊查询
 	 * 
 	 * @param keyword
 	 * @return
 	 */
-	List<T> listByCodeAndNameLike(@Param("keyword") String keyword);
+	List<T> listByNameLike(@Param("keyword") String keyword);
 
+	/**
+	 * 根据条件查询
+	 * 
+	 * @param queryInfo
+	 * @return
+	 */
+	List<T> listByCond(@Param("queryInfo") QueryInfo queryInfo);
+
+	/**
+	 * 查询分页信息
+	 * 
+	 * @param pageQueryInfo
+	 * @return
+	 */
+	List<T> pagination(@Param("pageQueryInfo") PageQueryInfo pageQueryInfo);
+
+	/**
+	 * 配合分页查询，查询数据总数
+	 * 
+	 * @param pageQueryInfo
+	 * @return
+	 */
+	Long count(@Param("commQueryItem") CommQueryItem queryItem);
 }

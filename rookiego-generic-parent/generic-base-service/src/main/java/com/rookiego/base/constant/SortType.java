@@ -7,7 +7,7 @@ package com.rookiego.base.constant;
  * @date 2017年7月26日-下午11:18:48
  * @jdk jdk1.8
  */
-public enum Sort {
+public enum SortType {
 
 	ASC("asc", "正项排序"),
 
@@ -17,7 +17,7 @@ public enum Sort {
 
 	private String name;
 
-	private Sort(String index, String name) {
+	private SortType(String index, String name) {
 		this.index = index;
 		this.name = name;
 	}

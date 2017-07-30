@@ -9,28 +9,39 @@ package com.rookiego.base.constant;
  */
 public enum Operator {
 
-	AND("and"),
+	EQUAL("=", "相等"),
 
-	OR("or"),
+	NOTEQUAL("<>", "不相等"),
 
-	LIKE("like"),
+	GT(">", "大于"),
 
-	IN("in"),
+	GTE(">=", "大于等于"),
 
-	GT("greaterthan"),
+	LT("<", "小于"),
 
-	GTE("greaterthanorequal"),
+	LTE("<=", "小于等于"),
 
-	LT("lessthan"),
+	LIKE("LIKE", "模糊查询"),
 
-	LTE("lessthanorequal"),
+	LIKERIGHT("LIKERIGHT", "右模糊匹配"),
 
-	NOT("not");
+	LIKELEFT("LIKELEFT", "左模糊匹配"),
+
+	IN("IN", "IN"),
+
+	NOTIN("NOT IN", "not in"),
+
+	ISNULL("IS NULL", "is null"),
+
+	ISNOTNULL("IS NOT NULL", "is not null");
 
 	private String index;
 
-	private Operator(String index) {
+	private String name;
+
+	private Operator(String index, String name) {
 		this.index = index;
+		this.name = name;
 	}
 
 	public String getIndex() {
@@ -39,6 +50,14 @@ public enum Operator {
 
 	public void setIndex(String index) {
 		this.index = index;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }
